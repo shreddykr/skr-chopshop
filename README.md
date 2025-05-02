@@ -36,6 +36,8 @@ Prevents players from selling vehicles that other players or themselves own (ant
 
 You can adjust the NPC location through the script's config file.
 
+To change the amounts the players get per vehicle go into the client and adjust the values at the bottom.
+
 
 --------------------------------------------------------------------------------
 
