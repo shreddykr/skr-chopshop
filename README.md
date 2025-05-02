@@ -25,6 +25,8 @@ Vehicle Deletion: Vehicles are deleted after the transaction.
 
 Cash Reward: Rewards are given in cash via ox_inventory.
 
+Prevents players from selling vehicles that other players or themselves own (anti-dupe / money exploit)
+
 0.00ms ⚡
 
 ----------------------------------------------------------------------------------
