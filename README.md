@@ -25,6 +25,8 @@ Vehicle Deletion: Vehicles are deleted after the transaction.
 
 Cash Reward: Rewards are given in cash via ox_inventory.
 
+0.00ms ⚡
+
 ----------------------------------------------------------------------------------
 
 ⚙️ Requirements
