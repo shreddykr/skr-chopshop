@@ -22,9 +22,9 @@ Vehicle Selling: Walk up to an NPC and sell stolen vehicles.
 
 Random Cash Reward: Earn between $3,000 to $10,000 for each vehicle, with a low chance of a high payout.
 
-Vehicle Deletion: Vehicles are deleted after the transaction.
+Vehicles are deleted after the transaction.
 
-Cash Reward: Rewards are given in cash via ox_inventory.
+Rewards are given in cash via ox_inventory.
 
 Prevents players from selling vehicles that other players or themselves own (anti-dupe / money exploit)
 
