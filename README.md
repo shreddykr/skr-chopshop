@@ -1,12 +1,12 @@
-#🛠️ skr-chopshop - Vehicle Selling Script for FiveM (QBCore) 🚗💰
+## 🛠️ skr-chopshop - Vehicle Selling Script for FiveM (QBCore) 🚗💰
 
-#📜 Overview
+📜 Overview
 
 skr-chopshop is a FiveM script built for the QBCore framework, allowing players to sell stolen vehicles to a chopshop NPC. Players can approach an NPC and sell their stolen vehicle for a random cash payout. The vehicle is then deleted, and the player is rewarded with cash directly in their inventory. The payout ranges from $3,000 to $10,000, with rare higher payouts.
 
 ----------------------------------------------------------------------------------
 
-#📱 Usage
+📱 Usage
 Approach the chopshop NPC with a stolen vehicle nearby.
 
 Interact with the NPC using the ox_target interaction.
@@ -15,7 +15,7 @@ A random cash payout will be given, and the vehicle will be removed from the wor
 
 ---------------------------------------------------------------------------------
 
-#💡 Features
+💡 Features
 
 Vehicle Selling: Walk up to an NPC and sell stolen vehicles.
 
@@ -27,7 +27,7 @@ Cash Reward: Rewards are given in cash via ox_inventory.
 
 ----------------------------------------------------------------------------------
 
-#⚙️ Requirements
+⚙️ Requirements
 
 QBCore Framework: The base framework required for FiveM server setup.
 
@@ -37,14 +37,14 @@ ox_inventory: For inventory and item management.
 
 ----------------------------------------------------------------------------------
 
-#🔧 Configuration
+🔧 Configuration
 
 You can adjust various settings, such as the NPC location and the payout ranges, through the script's config file.
 
 
 --------------------------------------------------------------------------------
 
-#❓ Why You Should Use This
+❓ Why You Should Use This
 
 Enhances Roleplay: Adds a realistic way for players to dispose of stolen vehicles and earn money, enriching the roleplay experience.
 
