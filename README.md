@@ -43,13 +43,17 @@ To change the amounts the players get per vehicle go into the client and adjust 
 
 ⚙️ Requirements
 
-QBCore Framework: The base framework required.
+## QBCore Framework: 
+The base framework required.
 
-ox_target: For NPC interaction via the targeting system.
+## ox_target: 
+For NPC interaction via the targeting system.
 
-ox_inventory: For inventory and item management.
+## ox_inventory: 
+For inventory and item management.
 
-oxmysql: For checking player owned vehicles.
+## oxmysql: 
+For checking player owned vehicles.
 
 ---------------------------------------------------------------------------------
 
