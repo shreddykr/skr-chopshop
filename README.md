@@ -33,11 +33,13 @@ Prevents players from selling vehicles that other players or themselves own (ant
 
 ⚙️ Requirements
 
-QBCore Framework: The base framework required for FiveM server setup.
+QBCore Framework: The base framework required.
 
 ox_target: For NPC interaction via the targeting system.
 
 ox_inventory: For inventory and item management.
+
+oxmysql: For checking player owned vehicles.
 
 ----------------------------------------------------------------------------------
 
