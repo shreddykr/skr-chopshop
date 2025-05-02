@@ -30,6 +30,8 @@ Prevents players from selling vehicles that other players or themselves own (ant
 
 0.00ms ⚡
 
+[Preview](https://streamable.com/q4dtfs)
+
 ----------------------------------------------------------------------------------
 
 
