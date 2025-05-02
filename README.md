@@ -31,6 +31,14 @@ Prevents players from selling vehicles that other players or themselves own (ant
 
 ----------------------------------------------------------------------------------
 
+
+🔧 Configuration
+
+You can adjust the NPC location through the script's config file.
+
+
+--------------------------------------------------------------------------------
+
 ⚙️ Requirements
 
 QBCore Framework: The base framework required.
@@ -41,14 +49,7 @@ ox_inventory: For inventory and item management.
 
 oxmysql: For checking player owned vehicles.
 
-----------------------------------------------------------------------------------
-
-🔧 Configuration
-
-You can adjust various settings, such as the NPC location and the payout ranges, through the script's config file.
-
-
---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
 
 ❓ Why You Should Use This
 
