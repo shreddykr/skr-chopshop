@@ -7,6 +7,7 @@ skr-chopshop is a FiveM script built for the QBCore framework, allowing players 
 ----------------------------------------------------------------------------------
 
 📱 **Usage**
+
 Approach the chopshop NPC with a stolen vehicle nearby.
 
 Interact with the NPC using the ox_target interaction.
