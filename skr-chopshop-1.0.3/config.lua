@@ -7,6 +7,8 @@ Config.TargetingSystem = "ox_target" -- Options: "ox_target", "qb_target"
 Config.MinPrice = 2000  -- Minimum payout
 Config.MaxPrice = 10000 -- Maximum payout
 
+Config.SellCooldown = 300 -- Cooldown in seconds before player can sell another stolen car (e.g., 300 seconds = 5 minutes)
+
 Config.SellVehicleEnabled = true -- Turn on and off selling random stolen vehicles -- only allows missions
 
 Config.Ped = {
