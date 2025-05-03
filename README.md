@@ -1,4 +1,4 @@
-<h1>🛠️ skr-chopshop - Vehicle Selling Script for FiveM (QBCore) 🚗💰</h1>
+<h1>🛠️ skr-chopshop - Advanced Vehicle Selling and Missions for FiveM (QBCore) 🚗💰</h1>
 
 📜 **Overview**
 
@@ -8,27 +8,38 @@ skr-chopshop is a FiveM script built for the QBCore framework, allowing players 
 
 📱 **Usage**
 
+**1. Sell Stolen Vehicles**
+   
 Approach the chopshop NPC with a stolen vehicle nearby.
 
-Interact with the NPC using the ox_target interaction.
+Interact with the NPC using the ox_target interaction system.
 
-A random cash payout will be given, and the vehicle will be removed from the world.
+Receive a random cash payout, and the vehicle will be removed from the game world.
+
+**3. Participate in Chopshop Missions**
+   
+Players can take on missions to locate and deliver specific vehicles to the chopshop for rewards.
+
+Missions are marked with blips on the map, guiding players to vehicle spawn locations.
+
+Successfully deliver the vehicle to earn a payout.
+
 
 ---------------------------------------------------------------------------------
 
 💡 **Features**
 
-Vehicle Selling: Walk up to an NPC and sell stolen vehicles.
+Chopshop Mission System: Retrieve specific vehicles from designated map locations and deliver them to the chopshop.
 
-Random Cash Reward: Earn between $3,000 to $10,000 for each vehicle, with a low chance of a high payout.
+Customizable Spawn Points: Easily update NPC and vehicle spawn locations to suit your server's gameplay style.
 
-Vehicles are deleted after the transaction.
+Dynamic Cash Rewards: Randomized payouts between $3,000 to $10,000 per vehicle, with chances for high-value rewards.
 
-Rewards are given in cash via ox_inventory.
+Anti-Exploit Mechanisms: Prevents players from exploiting the system by selling vehicles they own or duplicating cash.
 
-Prevents players from selling vehicles that other players or themselves own (anti-dupe / money exploit)
+Inventory Integration: Rewards are seamlessly handled via ox_inventory.
 
-0.00ms ⚡
+Performance Optimized: Script operates at 0.00ms ⚡
 
 [Preview](https://streamable.com/q4dtfs)
 
@@ -37,9 +48,19 @@ Prevents players from selling vehicles that other players or themselves own (ant
 
 🔧 **Configuration**
 
-You can adjust the NPC location through the script's config file.
+Define the NPC model, location, and animations 
 
-To change the amounts the players get per vehicle go into the client and adjust the values at the bottom.
+Mission Parameters
+
+Adjust mission radius, cooldowns, and blip settings.
+
+Configure a comprehensive list of vehicle models available for missions.
+
+Customize spawn points for vehicle retrieval missions.
+
+Reward Settings
+
+Modify cash payout ranges in the client file | Being moved to config cfg in 1.0.4
 
 
 --------------------------------------------------------------------------------
@@ -52,9 +73,6 @@ The base framework required.
 [**ox_target:** ](https://github.com/overextended/ox_target)
 For NPC interaction via the targeting system.
 
-[**ox_inventory:** ](https://github.com/overextended/ox_inventory)
-For inventory and item management.
-
 [**oxmysql:** ](https://github.com/overextended/oxmysql)
 For checking player owned vehicles.
 
@@ -62,10 +80,31 @@ For checking player owned vehicles.
 
 ❓ **Why You Should Use This**
 
-Enhances Roleplay: Adds a realistic way for players to dispose of stolen vehicles and earn money, enriching the roleplay experience.
+Immersive Roleplay: Enhance the gameplay experience with realistic vehicle selling and retrieval mechanics.
 
-Easy Integration: Works seamlessly with the QBCore framework and popular resources like ox_target and ox_inventory.
+Seamless Integration: Works flawlessly with QBCore and popular tools like ox_target and ox_inventory.
 
-Dynamic Payouts: The random payout system keeps the experience exciting and unpredictable for players.
+Engaging Gameplay: Missions and randomized payouts keep players entertained and motivated.
 
-Vehicle Management: Automatically deletes stolen vehicles, keeping your server clean and preventing abandoned cars from cluttering the map.
+Server Optimization: Automatically removes vehicles after transactions or deliveries, maintaining a clean and clutter-free game world.
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+📂 **Recent Updates (v1.0.1 → v1.0.3)**
+
+Players can now retrieve and deliver vehicles to the chopshop for cash rewards.
+
+Expanded vehicle list for missions, including high-performance and classic cars.
+
+Over 50 detailed vehicle spawn locations added across various regions, including urban, rural, and industrial areas.
+
+Added a debug toggle in config.lua for easier script troubleshooting.
+
+Centralized configurations for easy customization.
+
+Optimized NPC and vehicle spawn logic for enhanced performance and stability.
+
+Improved anti-exploit mechanisms to ensure secure server operations.
+
+
+
