@@ -58,47 +58,97 @@ function SelectRandomLocation()
 end
 
 -- Spawn a random vehicle at the specified location
-function SpawnRandomVehicle(location, heading)
+-- Function to spawn a random vehicle at a given location with a specific heading
+function SpawnRandomVehicle(spawnLocation)
+    -- Validate Vehicle Models in Config
     local models = Config.Mission.VehicleModels
-    if #models == 0 then
-        DebugPrint("Config.Mission.VehicleModels is empty! Please add some vehicle models.")
+    if not models or #models == 0 then
+        print("[DEBUG] Config.Mission.VehicleModels is empty or not defined!")
         return nil
     end
 
+    -- Extract position and heading from the spawnLocation vector4
+    local x, y, z, heading = spawnLocation.x, spawnLocation.y, spawnLocation.z, spawnLocation.w
+
+    -- Select a random vehicle model
     local randomModel = models[math.random(#models)]
     local modelHash = GetHashKey(randomModel)
+    print(string.format("[DEBUG] Spawning vehicle model: %s at x: %.2f, y: %.2f, z: %.2f, heading: %.2f", randomModel, x, y, z, heading))
 
-    DebugPrint("Attempting to spawn vehicle model: " .. randomModel)
-
+    -- Request and load the model
+    print("[DEBUG] Requesting model: " .. randomModel)
     RequestModel(modelHash)
     while not HasModelLoaded(modelHash) do
-        Wait(0) -- Wait for the model to load
+        Wait(0)
     end
+    print("[DEBUG] Model loaded successfully.")
 
-    local vehicle = CreateVehicle(modelHash, location.x, location.y, location.z, heading, true, false)
-    if vehicle then
-        DebugPrint("Vehicle spawned successfully: " .. randomModel)
-        -- Generate a random license plate with letters and numbers
-        local randomPlate = string.upper(string.char(math.random(65, 90), math.random(65, 90))) .. math.random(1000, 9999)
-        SetVehicleNumberPlateText(vehicle, randomPlate)
-        SetVehicleOnGroundProperly(vehicle)
-        SetEntityAsMissionEntity(vehicle, true, true)
-        SetVehicleDoorsLocked(vehicle, 2) -- Lock the vehicle
-        SetVehicleEngineOn(vehicle, true, true, false)
+    -- Clear the area to prevent interference
+    print("[DEBUG] Clearing area around spawn location.")
+    ClearAreaOfVehicles(x, y, z, 10.0, false, false, false, false, false)
+    ClearAreaOfObjects(x, y, z, 10.0, 0)
+    ClearAreaOfPeds(x, y, z, 10.0, 0)
 
-        -- Set a random fuel level based on the configured fuel system
-        local fuelLevel = math.random(30, 100) -- Random fuel level between 30 and 100
-        if Config.FuelSystem == 'LegacyFuel' then
-            exports['LegacyFuel']:SetFuel(vehicle, fuelLevel)
-        elseif Config.FuelSystem == 'cdn-fuel' then
-            exports['cdn-fuel']:SetFuel(vehicle, fuelLevel)
-        elseif Config.FuelSystem == 'lc_fuel' then
-            exports['lc_fuel']:SetFuel(vehicle, fuelLevel)
-        else
-            DebugPrint("Invalid Fuel System Configured: " .. tostring(Config.FuelSystem))
-        end
+    -- Spawn the vehicle
+    print("[DEBUG] Spawning the vehicle.")
+    local vehicle = CreateVehicle(modelHash, x, y, z + 0.7, 0.0, true, false)
+    if not vehicle then
+        print("[DEBUG] Failed to create the vehicle!")
+        return nil
+    end
+    print("[DEBUG] Vehicle spawned successfully.")
+
+    -- Freeze the vehicle to stabilize it
+    print("[DEBUG] Freezing vehicle position for stabilization.")
+    FreezeEntityPosition(vehicle, true)
+
+    -- Set position, heading, and ground alignment
+    print("[DEBUG] Setting vehicle position and heading.")
+    SetEntityCoords(vehicle, x, y, z + 0.7, false, false, false, true)
+    SetEntityHeading(vehicle, heading)
+    SetVehicleOnGroundProperly(vehicle)
+
+    -- Unfreeze the vehicle
+    print("[DEBUG] Unfreezing vehicle position.")
+    FreezeEntityPosition(vehicle, false)
+
+    -- Reapply heading after a short delay
+    CreateThread(function()
+        Wait(100)
+        SetEntityHeading(vehicle, heading)
+        print("[DEBUG] Heading reapplied after delay: " .. heading)
+    end)
+
+    -- Debug: Log final position and heading
+    CreateThread(function()
+        Wait(500)
+        local actualCoords = GetEntityCoords(vehicle)
+        local actualHeading = GetEntityHeading(vehicle)
+        print(string.format("[DEBUG] Final Position: x: %.2f, y: %.2f, z: %.2f, heading: %.2f",
+            actualCoords.x, actualCoords.y, actualCoords.z, actualHeading))
+    end)
+
+    -- Set additional properties
+    local randomPlate = string.upper(string.char(math.random(65, 90), math.random(65, 90))) .. math.random(1000, 9999)
+    print("[DEBUG] Setting vehicle plate: " .. randomPlate)
+    SetVehicleNumberPlateText(vehicle, randomPlate)
+    SetEntityAsMissionEntity(vehicle, true, true)
+    SetVehicleDoorsLocked(vehicle, 2)
+    SetVehicleEngineOn(vehicle, true, true, false)
+
+    -- Set fuel level if applicable
+    local fuelLevel = math.random(30, 100)
+    if Config.FuelSystem == 'LegacyFuel' then
+        print("[DEBUG] Setting fuel level using LegacyFuel: " .. fuelLevel)
+        exports['LegacyFuel']:SetFuel(vehicle, fuelLevel)
+    elseif Config.FuelSystem == 'cdn-fuel' then
+        print("[DEBUG] Setting fuel level using cdn-fuel: " .. fuelLevel)
+        exports['cdn-fuel']:SetFuel(vehicle, fuelLevel)
+    elseif Config.FuelSystem == 'lc_fuel' then
+        print("[DEBUG] Setting fuel level using lc_fuel: " .. fuelLevel)
+        exports['lc_fuel']:SetFuel(vehicle, fuelLevel)
     else
-        DebugPrint("Failed to create vehicle " .. randomModel .. " at the specified location.")
+        print("[DEBUG] Invalid Fuel System Configured: " .. tostring(Config.FuelSystem))
     end
 
     return vehicle
