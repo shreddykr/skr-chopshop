@@ -2,6 +2,8 @@ local QBCore = exports['qb-core']:GetCoreObject()
 
 local missionData = {}
 
+local lastSellTime = 0
+
 -- Variables for plate text display
 local showPlateText = false
 local targetPlate = ""
@@ -184,9 +186,16 @@ function SellVehicleToChopshop()
     local playerPed = PlayerPedId()
     local coords = GetEntityCoords(playerPed)
     local closestVehicle = GetClosestVehicle(coords.x, coords.y, coords.z, 10.0, 0, 70)
+    local currentTime = os.time()
 
     if closestVehicle == 0 then
         return QBCore.Functions.Notify('No vehicle found nearby.', 'error')
+    end
+
+    if (currentTime - lastSellTime) < Config.SellCooldown then
+        local remainingTime = Config.SellCooldown - (currentTime - lastSellTime)
+        QBCore.Functions.Notify('Please wait ' .. remainingTime .. ' seconds before selling another vehicle.', 'error')
+        return
     end
 
     local distance = #(coords - GetEntityCoords(closestVehicle))
@@ -199,4 +208,6 @@ function SellVehicleToChopshop()
 
     local vehicleNetId = NetworkGetNetworkIdFromEntity(closestVehicle)
     TriggerServerEvent('skr-chopshop:sellVehicle', plate, vehicleNetId)
+
+    lastSellTime = currentTime
 end
