@@ -36,10 +36,10 @@ end
 function GenerateRandomReward()
     local randomChance = math.random(1, 100)
 
-    -- Make it rare for the player to get more than $6,000
+    -- Make it rare for the player to get more than the minimum
     if randomChance <= 85 then
-        return math.random(3000, 6000)  -- 85% chance to get between $3,000 and $6,000
+        return math.random(Config.MinPrice, (Config.MinPrice + Config.MaxPrice) / 2)
     else
-        return math.random(6001, 10000) -- 15% chance to get between $6,001 and $10,000
+        return math.random((Config.MinPrice + Config.MaxPrice) / 2 + 1, Config.MaxPrice)
     end
 end
