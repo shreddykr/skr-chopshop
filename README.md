@@ -41,7 +41,7 @@
 
    Script automatically timesout if the mission isnt completed within 20 min. | 1.0.4 Config integration
 
-   Performance Optimized: Script operates at 0.00ms ⚡
+   Performance Optimized: Script operates at 0.01ms ⚡
 
    [Preview](https://streamable.com/gkdoo5)
 
@@ -74,6 +74,11 @@
 
    [**ox_target:** ](https://github.com/overextended/ox_target)
       For NPC interaction via the targeting system.
+      
+         or
+      
+   [**QB-Target:**](https://github.com/qbcore-framework/qb-target)
+      
 
    [**oxmysql:** ](https://github.com/overextended/oxmysql)
       For checking player owned vehicles.
@@ -92,7 +97,7 @@
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
-📂 **Recent Updates (v1.0.1 → v1.0.3)**
+📂 **Recent Updates (v1.0.1 → v1.0.4)**
 
    Players can now retrieve and deliver vehicles to the chopshop for cash rewards.
 
