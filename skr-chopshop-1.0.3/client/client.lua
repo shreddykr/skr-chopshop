@@ -95,7 +95,16 @@ CreateThread(function()
         })
     end
 
-    exports.ox_target:addLocalEntity(ped, options)
+    if Config.TargetingSystem == "ox_target" then
+        exports.ox_target:addLocalEntity(ped, options)
+    elseif Config.TargetingSystem == "qb_target" then
+        exports.qb-target:AddTargetEntity(ped, {
+            options = options,
+            distance = 2.5 -- Adjust interaction distance as needed
+        })
+    else
+        print("Invalid Targeting System Configured")
+    end
 end)
 
 -- Start Mission
