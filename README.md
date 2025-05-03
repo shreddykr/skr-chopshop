@@ -41,7 +41,7 @@
 
    Performance Optimized: Script operates at 0.00ms ⚡
 
-   [Preview](https://streamable.com/q4dtfs)
+   [Preview](https://streamable.com/gkdoo5)
 
 ----------------------------------------------------------------------------------
 
