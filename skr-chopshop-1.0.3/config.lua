@@ -2,6 +2,8 @@ Config = {}
 
 Config.Debug = false -- Toggle debug mode only if you know what to do after
 
+Config.TargetingSystem = "ox_target" -- Options: "ox_target", "qb_target"
+
 Config.SellVehicleEnabled = true -- Turn on and off selling random stolen vehicles -- only allows missions
 
 Config.Ped = {
