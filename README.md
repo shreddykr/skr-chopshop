@@ -39,6 +39,8 @@
 
    Inventory Integration: Rewards are seamlessly handled via ox_inventory.
 
+   Script automatically timesout if the mission isnt completed within 20 min. | 1.0.4 Config integration
+
    Performance Optimized: Script operates at 0.00ms ⚡
 
    [Preview](https://streamable.com/gkdoo5)
