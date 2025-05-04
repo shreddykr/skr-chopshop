@@ -1,4 +1,4 @@
-<h1>🛠️ skr-chopshop - Advanced Vehicle Selling and Missions for FiveM (QBCore) 🚗💰</h1>
+<h1>🛠️ skr-chopshop - Advanced Vehicle Selling and Missions for FiveM (QBCore)(OX_Target)(QB_Target)🚗💰</h1>
 
 📜 **Overview**
 
@@ -41,7 +41,9 @@
 
    Script automatically timesout if the mission isnt completed within 20 min. | 1.0.4 Config integration
 
-   Performance Optimized: Script operates at 0.01ms ⚡
+   Sets random mission vehicle fuel between 30-100% full
+
+   Performance Optimized: Script idles at 0.01ms under load 0.05⚡
 
    [Preview](https://streamable.com/gkdoo5)
 
