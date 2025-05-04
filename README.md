@@ -74,18 +74,38 @@
    [**QBCore Framework:** ](https://github.com/qbcore-framework/qb-core)
       The base framework required.
 
+   [**oxmysql:** ](https://github.com/overextended/oxmysql)
+      For checking player owned vehicles.
+
    [**ox_target:** ](https://github.com/overextended/ox_target)
       For NPC interaction via the targeting system.
       
          or
       
-   [**QB-Target:**](https://github.com/qbcore-framework/qb-target)
+   [**qb-target:**](https://github.com/qbcore-framework/qb-target)
+
+         then
+
+   [**legacyfuel:**](https://github.com/InZidiuZ/LegacyFuel)
+
+         or 
+
+   [**cdn-fuel:**](https://github.com/CodineDev/cdn-fuel)
+
+         or 
+
+   [**lc_fuel:**](https://github.com/LeonardoSoares98/lc_fuel)
       
 
    [**oxmysql:** ](https://github.com/overextended/oxmysql)
       For checking player owned vehicles.
 
 ---------------------------------------------------------------------------------
+
+🔧 **Recommended Server Updates**
+      For the best experience possible you will notice the notifications system being used is in fact qb notifications found in qb-smallresources under functions. To make this look better you can update that function to work with **ox_lib** since most servers
+      use or have it. Personally you see me using okoknotify but rerouted in ox_lib so that if ox_lib calls for a notification it is instead okoknotify. I also have qb notifications routed to ox lib so that its easy to configure and update instead of 
+      changing too much.
 
 ❓ **Why You Should Use This**
 
