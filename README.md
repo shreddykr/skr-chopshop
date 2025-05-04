@@ -45,10 +45,12 @@
 
    Performance Optimized: Script idles at 0.01ms under load 0.05⚡
 
-   [Preview](https://streamable.com/gkdoo5)
+   📽️[**Preview**](https://streamable.com/gkdoo5)
 
 ----------------------------------------------------------------------------------
 
+
+📸 [**Preview Config File**](https://raw.githubusercontent.com/shreddykr/skr-chopshop/refs/heads/main/config.lua)
 
 🔧 **Configuration**
 
