@@ -111,7 +111,7 @@
 
    4.  Done!
 
-   5.  Consider rerouting qb notifications to ox_lib or read below for best ui options.
+   5.  Consider rerouting qb notifications to ox_lib or read below for best UI.
 
 
 --------------------------------------------------------------------------------
