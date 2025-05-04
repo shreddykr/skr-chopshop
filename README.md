@@ -101,19 +101,37 @@
 
 📂 **Recent Updates (v1.0.3 → v1.0.4)**
 
-   Players can now retrieve and deliver vehicles to the chopshop for cash rewards.
+   -Added activemissions sequence for players to be able to do this simultaneously
 
-   Expanded vehicle list for missions, including high-performance and classic cars.
+   -Added multiple support for fueling scripts when the vehicle spawns
 
-   Over 50 detailed vehicle spawn locations added across various regions, including urban, rural, and industrial areas.
+   -Added support for qb-target
 
-   Added a debug toggle in config.lua for easier script troubleshooting.
+   -Added config for sell prices
 
-   Centralized configurations for easy customization.
+   -Interaction distance & Delivery radius config
 
-   Optimized NPC and vehicle spawn logic for enhanced performance and stability.
+   -Mission Timeout/Wait period for next mission/wait to sell time config
 
-   Improved anti-exploit mechanisms to ensure secure server operations.
+   -Fixed vehicle spawn heading
+
+   -Cannot sell vehicles while currently in a mission can only end mission
+
+   -Added delivery system to track progress of the mission
+
+   -Mission overlap prevention
+
+   -Mission start and end logic based on player
+
+   -Vehicle Verification
+
+   -Added debugging/monitoring
+
+   -Combined client script into one
+
+   -Fixed script sending too many notifications now its streamlined.
+
+   -Fixed multiple exploits
 
 
 
