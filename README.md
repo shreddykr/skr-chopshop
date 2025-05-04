@@ -50,9 +50,7 @@
 ----------------------------------------------------------------------------------
 
 
-📸 [**Preview Config File**](https://raw.githubusercontent.com/shreddykr/skr-chopshop/refs/heads/main/config.lua)
-
-🔧 **Configuration**
+🔧 [**Configuration**](https://raw.githubusercontent.com/shreddykr/skr-chopshop/refs/heads/main/config.lua)
 
    Define the NPC model, location, and animations 
 
