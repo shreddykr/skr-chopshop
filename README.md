@@ -103,7 +103,7 @@
 
 🚀 **Installation Instructions**
 
-   1. Download the latest version
+   1. Download the [latest version](https://github.com/shreddykr/skr-chopshop/releases/tag/1.0.4)
 
    2.      ensure skr-chopshop(after all requirements)
 
@@ -167,5 +167,3 @@
 
    -Fixed multiple exploits
 
-
-[   **Download Latest Release**](https://github.com/shreddykr/skr-chopshop/releases/tag/1.0.4)
