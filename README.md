@@ -12,7 +12,7 @@
    
    Approach the chopshop NPC with a stolen vehicle nearby.
 
-   Interact with the NPC using the ox_target interaction system.
+   Interact with the NPC using the ox_target or qb-target interaction system.
 
    Receive a random cash payout, and the vehicle will be removed from the game world.
 
