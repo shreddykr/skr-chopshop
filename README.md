@@ -1,4 +1,4 @@
-<h1>🛠️ skr-chopshop - Advanced Vehicle Selling and Missions for FiveM (QBCore)(OX_Target)(QB_Target)🚗💰</h1>
+<h1>🛠️ (QB) skr-chopshop - Advanced Vehicle Selling and Missions for FiveM 🚗💰</h1>
 
 📜 **Overview**
 
