@@ -101,6 +101,21 @@
 
 ---------------------------------------------------------------------------------
 
+🚀 **Installation Instructions**
+
+   1. Download the latest version
+
+   2.      ensure skr-chopshop(after all requirements)
+
+   3.  Configure the config file
+
+   4.  Done!
+
+   5.  Consider rerouting qb notifications to ox_lib or read below for best ui options.
+
+
+--------------------------------------------------------------------------------
+
 🔧 **Recommended Server Updates**
       For the best experience possible you will notice the notifications system being used is in fact qb notifications found in qb-smallresources under functions. To make this look better you can update that function to work with **ox_lib** since most servers
       use or have it. Personally you see me using okoknotify but rerouted in ox_lib so that if ox_lib calls for a notification it is instead okoknotify. I also have qb notifications routed to ox lib so that its easy to configure and update instead of 
