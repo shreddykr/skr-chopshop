@@ -72,15 +72,15 @@
 ⚙️ **Requirements**
 
    [**QBCore Framework:** ](https://github.com/qbcore-framework/qb-core)
-      The base framework required.
+
 
    [**oxmysql:** ](https://github.com/overextended/oxmysql)
-      For checking player owned vehicles.
+
 
 --------------------------------------------------------------------------------
 
    [**ox_target:** ](https://github.com/overextended/ox_target)
-      For NPC interaction via the targeting system.
+
       
    or
       
