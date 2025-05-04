@@ -77,28 +77,27 @@
    [**oxmysql:** ](https://github.com/overextended/oxmysql)
       For checking player owned vehicles.
 
+--------------------------------------------------------------------------------
+
    [**ox_target:** ](https://github.com/overextended/ox_target)
       For NPC interaction via the targeting system.
       
-         or
+      or
       
    [**qb-target:**](https://github.com/qbcore-framework/qb-target)
 
-         then
+---------------------------------------------------------------------------------
 
    [**legacyfuel:**](https://github.com/InZidiuZ/LegacyFuel)
 
-         or 
+      or 
 
    [**cdn-fuel:**](https://github.com/CodineDev/cdn-fuel)
 
-         or 
+      or 
 
    [**lc_fuel:**](https://github.com/LeonardoSoares98/lc_fuel)
       
-
-   [**oxmysql:** ](https://github.com/overextended/oxmysql)
-      For checking player owned vehicles.
 
 ---------------------------------------------------------------------------------
 
