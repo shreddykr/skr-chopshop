@@ -121,6 +121,8 @@
       use or have it. Personally you see me using okoknotify but rerouted in ox_lib so that if ox_lib calls for a notification it is instead okoknotify. I also have qb notifications routed to ox lib so that its easy to configure and update instead of 
       changing too much.
 
+------------------------------------------------------------------------------------------
+
 ❓ **Why You Should Use This**
 
    Immersive Roleplay: Enhance the gameplay experience with realistic vehicle selling and retrieval mechanics.
