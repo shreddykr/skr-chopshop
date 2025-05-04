@@ -153,4 +153,4 @@
    -Fixed multiple exploits
 
 
-
+[   **Download Latest Release**](https://github.com/shreddykr/skr-chopshop/releases/tag/1.0.4)
