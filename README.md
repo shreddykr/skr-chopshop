@@ -39,7 +39,7 @@
 
    Inventory Integration: Rewards are seamlessly handled via ox_inventory.
 
-   Script automatically timesout if the mission isnt completed within 20 min. | 1.0.4 Config integration
+   Script automatically timesout if the mission isnt completed within 30 min.
 
    Sets random mission vehicle fuel between 30-100% full
 
@@ -99,7 +99,7 @@
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
-📂 **Recent Updates (v1.0.1 → v1.0.4)**
+📂 **Recent Updates (v1.0.3 → v1.0.4)**
 
    Players can now retrieve and deliver vehicles to the chopshop for cash rewards.
 
