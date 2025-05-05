@@ -45,8 +45,14 @@
 
    Performance Optimized: Script idles at 0.01ms under load 0.05⚡
 
+   <img width="1090" alt="Screenshot 2025-05-04 180615" src="https://github.com/user-attachments/assets/506b93a5-306d-4855-88af-d71cae04b8ee" />
+   <img width="1091" alt="Screenshot 2025-05-04 180654" src="https://github.com/user-attachments/assets/4094e47d-b9f9-4b0d-ab62-7b74e8c4ce0f" />
+   <img width="1091" alt="Screenshot 2025-05-04 180733" src="https://github.com/user-attachments/assets/341fdf1d-ed22-47c8-a217-e8ec4cb723a9" />
+   <img width="1091" alt="Screenshot 2025-05-04 180808" src="https://github.com/user-attachments/assets/de0d26b9-622b-46cc-9048-b43fac5563b6" />
+   <img width="1091" alt="Screenshot 2025-05-04 180857" src="https://github.com/user-attachments/assets/e774e411-5f3e-4ef6-8323-f91745ed3384" />
+   
    📽️[**Preview**](https://streamable.com/gkdoo5)
-
+   
 ----------------------------------------------------------------------------------
 
 
