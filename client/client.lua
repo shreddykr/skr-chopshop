@@ -502,3 +502,29 @@ RegisterNetEvent('skr-chopshop:deleteVehicle', function(vehicleNetId, plate)
         DebugPrint("Vehicle does not exist and could not be deleted.")
     end
 end)
+
+RegisterNetEvent("skr-chopshop:client:AddChopBlip", function(data)
+    local coords = data.coords or vector4(476.4, -1315.28, 28.225, 255.99)
+    local label = data.label or "Chop Shop Dropoff"
+
+    -- Create the blip
+    local blip = AddBlipForCoord(coords.x, coords.y, coords.z)
+    SetBlipSprite(blip, 1) -- You can change sprite ID
+    SetBlipDisplay(blip, 4)
+    SetBlipScale(blip, 0.8)
+    SetBlipColour(blip, 5)
+    SetBlipAsShortRange(blip, false)
+    BeginTextCommandSetBlipName("STRING")
+    AddTextComponentString(label)
+    EndTextCommandSetBlipName(blip)
+
+    -- Set waypoint if the player doesn't have one already
+    if not IsWaypointActive() then
+        SetNewWaypoint(coords.x, coords.y)
+    end
+
+    -- Remove blip after 2 minutes
+    SetTimeout(120000, function()
+        RemoveBlip(blip)
+    end)
+end)
