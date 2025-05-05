@@ -119,6 +119,8 @@
 
    5.  Consider rerouting qb notifications to ox_lib or read below for best UI.
 
+   [Support](https://discord.com/invite/HfuctRgc4X)
+
 
 --------------------------------------------------------------------------------
 
