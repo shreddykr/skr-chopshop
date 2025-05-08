@@ -1,7 +1,7 @@
 -- The script comes ready with the event to handle this all you need to do is open the config file and
 -- replace niko bellics line with this one then you are done.
 
-{
+```{
     name = "Tariq Vellon",
     text = "Hey gearhead! I've got a lead on some quality rides. I'm your go-to guy for the chopping scene, and there's a job that's perfect for a pro like you. High-quality wheels, no fuss, and a solid payday at the finish line. I've got the details covered - just go along with it. Keep it quiet, bypass those alarms, and let's score big without making too much noise.",
     domain = "Chop Shop",
