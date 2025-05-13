@@ -7,6 +7,21 @@ local lastSellTime = {}
 local showPlateText = false
 local targetPlate = ""
 
+RegisterNetEvent('my-script:startMission', function()
+    DebugPrint("Starting mission via ped interaction.")
+    StartMission()
+end)
+
+RegisterNetEvent('my-script:endMission', function()
+    DebugPrint("Ending mission via ped interaction.")
+    EndMission()
+end)
+
+RegisterNetEvent('my-script:sellVehicle', function()
+    DebugPrint("Selling vehicle via ped interaction.")
+    SellVehicleToChopshop()
+end)
+
 -- Debugging helper function
 function DebugPrint(message)
     if Config.Debug then
@@ -205,70 +220,82 @@ CreateThread(function()
     SetEntityInvincible(ped, true)
     SetBlockingOfNonTemporaryEvents(ped, true)
 
-    -- Define interaction options (ensure it's a numerically indexed array)
-    local options = {
-        {
-            label = 'Start Mission',
-            icon = 'fas fa-car',
-            onSelect = function()
-                DebugPrint("Starting mission via ped interaction.")
-                StartMission()
-            end
-        },
-        {
-            label = 'End Mission',
-            icon = 'fas fa-flag-checkered',
-            onSelect = function()
-                DebugPrint("Ending mission via ped interaction.")
-                EndMission()
-            end
+    local options = {}
+
+    if Config.TargetingSystem == "qb-target" then
+        options = {
+            {
+                label = 'Start Mission',
+                icon = 'fas fa-car',
+                type = 'client',
+                event = 'my-script:startMission'
+            },
+            {
+                label = 'End Mission',
+                icon = 'fas fa-flag-checkered',
+                type = 'client',
+                event = 'my-script:endMission'
+            }
         }
-    }
 
-    if Config.SellVehicleEnabled then
-        table.insert(options, {
-            label = 'Sell Vehicle',
-            icon = 'fas fa-hand-holding-usd',
-            canInteract = function(entity, distance, data)
-                local playerId = GetPlayerServerId(PlayerId())
-                local missionData = playerMissions[playerId]
-                return not (missionData and missionData.isOnMission) -- Only show if not on a mission
-            end,
-            onSelect = function()
-                DebugPrint("Selling vehicle via ped interaction.")
-                SellVehicleToChopshop()
-            end
-        })
-    end
-
-    -- Debug: Ensure options is a valid array
-    if not options or type(options) ~= "table" or #options == 0 then
-        DebugPrint("Options table is invalid! Ensure it is a numerically indexed array.")
-        return
-    end
-
-    -- Add interaction to targeting system
-    if Config.TargetingSystem == "ox_target" then
-        if exports and exports.ox_target and exports.ox_target.addLocalEntity then
-            exports.ox_target:addLocalEntity(ped, options)
-            DebugPrint("ox_target:addLocalEntity called successfully.")
-        else
-            DebugPrint("ox_target export `addLocalEntity` not found! Ensure ox_target is installed and configured properly.")
-        end
-    elseif Config.TargetingSystem == "qb-target" then
-        if exports and exports['qb-target'] and exports['qb-target'].AddTargetEntity then
-            exports['qb-target']:AddTargetEntity(ped, {
-                options = options,
-                distance = Config.InteractionDistance
+        if Config.SellVehicleEnabled then
+            table.insert(options, {
+                label = 'Sell Vehicle',
+                icon = 'fas fa-hand-holding-usd',
+                type = 'client',
+                event = 'my-script:sellVehicle'
             })
-            DebugPrint("qb-target:AddTargetEntity called successfully.")
-        else
-            DebugPrint("qb-target export `AddTargetEntity` not found! Ensure qb-target is installed and configured properly.")
         end
+
+        exports['qb-target']:AddTargetEntity(ped, {
+            options = options,
+            distance = Config.InteractionDistance
+        })
+        DebugPrint("qb-target:AddTargetEntity called successfully.")
+
+    elseif Config.TargetingSystem == "ox_target" then
+        options = {
+            {
+                label = 'Start Mission',
+                icon = 'fas fa-car',
+                onSelect = function()
+                    DebugPrint("Starting mission via ped interaction.")
+                    StartMission()
+                end
+            },
+            {
+                label = 'End Mission',
+                icon = 'fas fa-flag-checkered',
+                onSelect = function()
+                    DebugPrint("Ending mission via ped interaction.")
+                    EndMission()
+                end
+            }
+        }
+
+        if Config.SellVehicleEnabled then
+            table.insert(options, {
+                label = 'Sell Vehicle',
+                icon = 'fas fa-hand-holding-usd',
+                canInteract = function(entity, distance, data)
+                    local playerId = GetPlayerServerId(PlayerId())
+                    local missionData = playerMissions[playerId]
+                    return not (missionData and missionData.isOnMission)
+                end,
+                onSelect = function()
+                    DebugPrint("Selling vehicle via ped interaction.")
+                    SellVehicleToChopshop()
+                end
+            })
+        end
+
+        exports.ox_target:addLocalEntity(ped, options)
+        DebugPrint("ox_target:addLocalEntity called successfully.")
     else
         DebugPrint("Invalid Targeting System Configured in Config.TargetingSystem. Must be `ox_target` or `qb-target`.")
     end
 end)
+
 
 -- Start Mission
 function StartMission()
