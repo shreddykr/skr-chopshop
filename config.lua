@@ -18,7 +18,7 @@ Config.Debug = false
 
 Config.TargetingSystem = "ox_target" -- Options: "ox_target", "qb_target"
 
-Config.FuelSystem = 'lc_fuel' -- Select the fuel system to use: 'LegacyFuel', 'cdn-fuel', or 'lc_fuel'
+Config.FuelSystem = 'lc_fuel' -- Select the fuel system to use: 'legacyFuel', 'cdn-fuel', or 'lc_fuel'
 
 -------------------------------------------------------------------------------------------------------------------------
 
