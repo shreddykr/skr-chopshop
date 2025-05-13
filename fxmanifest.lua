@@ -4,7 +4,7 @@ game 'gta5'
 -- Resource information
 author 'shreddykr'
 description 'Chopshop Mission and Vehicle Selling'
-version '1.0.4'
+version '1.0.5'
 
 -- Client scripts
 client_scripts {
