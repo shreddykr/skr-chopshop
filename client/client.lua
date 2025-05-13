@@ -7,17 +7,17 @@ local lastSellTime = {}
 local showPlateText = false
 local targetPlate = ""
 
-RegisterNetEvent('my-script:startMission', function()
+RegisterNetEvent('skr-chopshop:startMission', function()
     DebugPrint("Starting mission via ped interaction.")
     StartMission()
 end)
 
-RegisterNetEvent('my-script:endMission', function()
+RegisterNetEvent('skr-chopshop:endMission', function()
     DebugPrint("Ending mission via ped interaction.")
     EndMission()
 end)
 
-RegisterNetEvent('my-script:sellVehicle', function()
+RegisterNetEvent('skr-chopshop:sellVehicle', function()
     DebugPrint("Selling vehicle via ped interaction.")
     SellVehicleToChopshop()
 end)
@@ -228,13 +228,13 @@ CreateThread(function()
                 label = 'Start Mission',
                 icon = 'fas fa-car',
                 type = 'client',
-                event = 'my-script:startMission'
+                event = 'skr-chopshop:startMission'
             },
             {
                 label = 'End Mission',
                 icon = 'fas fa-flag-checkered',
                 type = 'client',
-                event = 'my-script:endMission'
+                event = 'skr-chopshop:endMission'
             }
         }
 
@@ -243,7 +243,7 @@ CreateThread(function()
                 label = 'Sell Vehicle',
                 icon = 'fas fa-hand-holding-usd',
                 type = 'client',
-                event = 'my-script:sellVehicle'
+                event = 'skr-chopshop:sellVehicle'
             })
         end
 
