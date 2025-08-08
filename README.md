@@ -43,6 +43,11 @@
    
    📽️[**Preview**](https://www.youtube.com/watch?v=Og2wkxicbL4)
    
+<img width="2008" height="712" alt="Screenshot 2025-08-07 185250" src="https://github.com/user-attachments/assets/09946c14-cc33-4b9a-b442-eb65d199f787" />
+<img width="1528" height="671" alt="Screenshot 2025-08-07 185317" src="https://github.com/user-attachments/assets/97c501b4-f452-48e0-b39e-63c35bb3cac7" />
+
+   
+   
 ----------------------------------------------------------------------------------
 
 
