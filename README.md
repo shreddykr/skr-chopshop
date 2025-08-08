@@ -41,7 +41,7 @@
 
    Performance Optimized: Script idles at 0.01ms under load 0.05⚡
    
-   📽️[**Preview**](https://streamable.com/gkdoo5)
+   📽️[**Preview**](https://www.youtube.com/watch?v=Og2wkxicbL4)
    
 ----------------------------------------------------------------------------------
 
