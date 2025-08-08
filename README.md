@@ -1,28 +1,20 @@
-<h1>🛠️ (QB) skr-chopshop - Advanced Vehicle Selling and Missions for FiveM 🚗💰</h1>
+<h1>🛠️ (QB) SKR CHOPSHOP - Advanced Chopshop Missions for FiveM 🚗💰</h1>
 
 📜 **Overview**
 
-   skr-chopshop is a FiveM script built for the QBCore framework, allowing players to sell stolen vehicles to a chopshop NPC. Players can approach an NPC and sell their stolen vehicle for a random cash payout. The vehicle is then deleted, and the player is rewarded with cash directly. The payout ranges    from $3,000 to $10,000, with rare higher payouts configurable in the config file.
+   **SKR CHOPSHOP**  is a FiveM script built for the QBCore framework, allowing players to start missions after finding a ped around the map. NPCs spawn with weapons configurable in the **config** lua and behave in a defensive manor towards the vehicles. In order to complete the mission take out anyone in the way of stealing the car and deliver the car to the same location the mission started.
 
 ----------------------------------------------------------------------------------
 
 📱 **Usage**
 
-**1. Sell Stolen Vehicles**
+**Participate in Chopshop Missions**
    
-   Approach the chopshop NPC with a stolen vehicle nearby.
+   Players can take on missions to locate and deliver specific vehicles to the chopshop for various rewards configurable to each mission.
 
-   Interact with the NPC using the **ox_target** or **qb-target** interaction system.
+   After selecting a mission the vehicle is marked with a gold blip and route on the map, guiding players to vehicle locations.
 
-   Receive a random cash payout, and the vehicle will be removed from the game world.
-
-**3. Participate in Chopshop Missions**
-   
-   Players can take on missions to locate and deliver specific vehicles to the chopshop for rewards.
-
-   Missions are marked with blips on the map, guiding players to vehicle spawn locations.
-
-   Successfully deliver the vehicle to earn a payout.
+   Successfully collect and deliver the vehicle to earn a payout.
 
 
 ---------------------------------------------------------------------------------
@@ -33,23 +25,21 @@
 
    Customizable Spawn Points: Easily update NPC and vehicle spawn locations to suit your server's gameplay style.
 
-   Dynamic Cash Rewards: Randomized payouts between $3,000 to $10,000 per vehicle, with chances for high-value rewards.
+   Configurable payouts for each missions. Add as many missions as you would like in a few minutes.
 
-   Anti-Exploit Mechanisms: Prevents players from exploiting the system by selling vehicles they own or duplicating cash.
+   Anti-Exploit Mechanisms: Prevents players from leaving early to collect pay.
 
-   Inventory Integration: Rewards are seamlessly handled via ox_inventory.
+   Seamless payments with QB that go straight to the players bank account after each mission.
 
-   Script automatically timesout if the mission isnt completed within 30 min.
+   Script automatically timesout if the mission isnt completed within 25 min.
 
-   Sets random mission vehicle fuel between 30-100% full
+   Sets the fuel between 30-70% to avoid running out of fuel during a mission.
+
+   Script automatically ends if the player dies.
+
+   Automatic version checking after every server start.
 
    Performance Optimized: Script idles at 0.01ms under load 0.05⚡
-
-   <img width="1090" alt="Screenshot 2025-05-04 180615" src="https://github.com/user-attachments/assets/506b93a5-306d-4855-88af-d71cae04b8ee" />
-   <img width="1091" alt="Screenshot 2025-05-04 180654" src="https://github.com/user-attachments/assets/4094e47d-b9f9-4b0d-ab62-7b74e8c4ce0f" />
-   <img width="1091" alt="Screenshot 2025-05-04 180733" src="https://github.com/user-attachments/assets/341fdf1d-ed22-47c8-a217-e8ec4cb723a9" />
-   <img width="1091" alt="Screenshot 2025-05-04 180808" src="https://github.com/user-attachments/assets/de0d26b9-622b-46cc-9048-b43fac5563b6" />
-   <img width="1091" alt="Screenshot 2025-05-04 180857" src="https://github.com/user-attachments/assets/e774e411-5f3e-4ef6-8323-f91745ed3384" />
    
    📽️[**Preview**](https://streamable.com/gkdoo5)
    
@@ -58,19 +48,13 @@
 
 🔧 [**Configuration**](https://github.com/shreddykr/skr-chopshop/blob/main/config.lua)
 
-   Define the NPC model, location, and animations 
-
-   Mission Parameters
+   Define the NPC model, locations, aggression, weapon model and accuracy.
    
-   Adjust mission radius, cooldowns, and blip settings.
+   Adjust missions, and blip settings.
 
-   Configure a comprehensive list of vehicle models available for missions.
+   Configure a comprehensive list of vehicle models and plate information available for missions.
 
-   Customize spawn points for vehicle retrieval missions.
-
-   Reward Settings
-
-   Modify cash payout ranges in the client file | Being moved to config cfg in 1.0.4
+   Configure each missions payout.
 
 
 --------------------------------------------------------------------------------
@@ -107,6 +91,10 @@
 
 ---------------------------------------------------------------------------------
 
+   optional [**sd_police**](https://github.com/Samuels-Development/sd-aipolice)
+
+---------------------------------------------------------------------------------
+
 🚀 **Installation Instructions**
 
    1. Download the [latest version](https://github.com/shreddykr/skr-chopshop/releases/tag/1.0.4)
@@ -133,43 +121,27 @@
 
 ❓ **Why You Should Use This**
 
-   Immersive Roleplay: Enhance the gameplay experience with realistic vehicle selling and retrieval mechanics.
+   Immersive Roleplay: Enhance the gameplay experience with realistic gun fights and robberys.
 
-   Seamless Integration: Works flawlessly with QBCore and popular tools like ox_target and ox_inventory.
+   Seamless Integration: Works flawlessly with QBCore and popular tools like ox_target.
 
-   Engaging Gameplay: Missions and randomized payouts keep players entertained and motivated.
+   Engaging Gameplay: Mission variety keeps players entertained and motivated.
 
    Server Optimization: Automatically removes vehicles after transactions or deliveries, maintaining a clean and clutter-free game world.
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
-📂 **Recent Updates (v1.0.3 → v1.0.4)**
+📂 **Recent Updates (v1.0.5 → v1.0.6)**
 
-   -Added activemissions sequence for players to be able to do this simultaneously
-
-   -Added multiple support for fueling scripts when the vehicle spawns
-
-   -Added support for qb-target
-
-   -Added config for sell prices
-
-   -Interaction distance & Delivery radius config
-
-   -Mission Timeout/Wait period for next mission/wait to sell time config
-
-   -Fixed vehicle spawn heading
-
-   -Cannot sell vehicles while currently in a mission can only end mission
-
-   -Added delivery system to track progress of the mission
-
-   -Mission overlap prevention
-
-   -Mission start and end logic based on player
-
-   -Vehicle Verification
-
-   -Added debugging/monitoring
+   - Removed ability to sell random cars
+   - Added Advanced Missions with ability to add more in the config
+   - 5 Handcrafted Missions
+   - Optimized client and server script
+   - Updated overlay text
+   - Added support for sd_police for full immersion
+   - Added ability to set configure NPCs for missions
+   - Added version checking in server lua
+   - QB Menu to select different missions
 
    -Combined client script into one
 
