@@ -38,6 +38,9 @@ local resourceName = GetCurrentResourceName()
 local currentVersion = GetResourceMetadata(resourceName, 'version', 0)
 
 CreateThread(function()
+    
+    print("^2[" .. resourceName .. "]^0 Thank you for downloading! Current version: ^3" .. currentVersion .. "^0")
+
     PerformHttpRequest("https://raw.githubusercontent.com/shreddykr/skr-chopshop/main/version.txt", function(code, res, _)
         if code == 200 then
             local latestVersion = res:match("%S+")
