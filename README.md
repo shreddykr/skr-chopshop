@@ -136,17 +136,12 @@
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
-📂 **Recent Updates (v1.0.5 → v1.0.6)**
+📂 **Recent Updates (v1.0.6 → v1.0.7)**
 
-   - Removed ability to sell random cars
-   - Added Advanced Missions with ability to add more in the config
-   - 5 Handcrafted Missions
-   - Optimized client and server script
-   - Updated overlay text
-   - Added support for sd_police for full immersion
-   - Added ability to set configure NPCs for missions
-   - Added version checking in server lua
-   - QB Menu to select different missions
+✅ Added 6 missions
+✅ Police are suppressed until player gets into car(sd-police)
+✅ qb-target issue fixed
+✅ optimized client script
 
    -Combined client script into one
 
